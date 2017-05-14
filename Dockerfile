@@ -176,25 +176,48 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 # dependencies and scaffolding files for drupal leaving us with only the drupal contributed modules to deal with in the
 # composer.json file. Nice and clean.
 #
+# Note: it is strongly recommended to include the development tools with all of the contribs for cascading reasons
+# It's extra bandwidth (which is important in my rural situation) but the consequences of not having them sound serious
+#   - if there are no dev tools in the top level then no dev tools will installable in any subsequent levels
+#   - if the dev tools are not installed right from the top level then incomplete composer.lock files will be generated
+#
+# See: https://github.com/composer/composer/issues/1874
+#
 # composer create-project flags:
 # --stability dev     latest package versions. Presumably should be changed in production and needs abstracting
-# --no-dev            do not load development software stack. Presumably needs removing in development environment
 # --profile           display timing and memory usage information
-# --no-interaction    needs to be preset to stop installer askingAL_is case the --keep-vcs flag should be uncommented below.
+# --no-interaction    needs to be present to stop installer crashing for want of user input. Defaults are fine.
 # --no-progress       disable download progress display as it clutters the terminal
-
-# example from DO
-# composer create-project drupal-composer/drupal-project:8.x-dev some-dir --stability dev --no-interaction
-# TODO this is broken - hardcoding parameters below. Not a release blocker for a single site installation
+# TODO this is broken - hardcoding parameters below to bypass problem. Not a release blocker for a single site installation
 # RUN composer create-project ${DRUPAL_SCAFFOLD}:${DRUPAL_VERSION} ${DRUPAL_ROOT} \
 RUN composer create-project drupal-composer/drupal-project:8.x-dev some-dir \
   --stability dev \
-  --no-dev \
   --profile \
   --no-interaction \
   --no-progress
 
-# TODO install drupal modules
+##
+# Install Drupal Contributed Modules
+##
+
+# Test proof-of-concept: Download Drupal contributed module
+
+
+RUN cd some-dir \
+  && composer require \
+     drupal/icon:~1.0 \
+     drupal/ctools:~3.0 \
+     drupal/group:~1.0-beta5 \
+     drupal/diff:~1.0-rc1 \
+     drupal/fontawesome:~1.2 \
+     drupal/pathauto:~1.0 \
+     drupal/token:~1.0 \
+     --prefer-dist \
+     --no-progress \
+     --prefer-stable \
+     --no-update
+
+# TODO install rest of the drupal contributed modules
 
 # TODO cleanup composer installation files for this image layer
 # TODO delete software not required outside of the build process e.g. curl composer ?openssl
