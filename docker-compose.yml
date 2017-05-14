@@ -1,0 +1,21 @@
+# https://docs.docker.com/compose/overview/
+version: '3.1'
+services:
+  web:
+    image: markfuller/drupal-8
+    deploy:
+      replicas: 3
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+        restart_policy:
+          condition: on-failure
+        ports:
+          - "80:80"
+        networks:
+          webnet:
+networks:
+  webnet:
+  # the default load-balanced overlay network
+
