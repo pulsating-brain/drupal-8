@@ -2,7 +2,6 @@
 # Roadmap: https://github.com/drush-ops/drush/issues/2528
 # They state they will support a tool to convert Makefiles into Composer files
 # Make will keep getting bugfixes in Drush 8
-# https://github.com/docker-library/php/blob/6844e717a56a5dd8ad87a236a96bea069cc635fd/5.6/alpine/Dockerfile
 #####
 
 
