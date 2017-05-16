@@ -11,7 +11,7 @@
 # https://www.musl-libc.org/
 # https://busybox.net/about.html
 
-FROM alpine:3.5
+FROM drupal:8.3-fpm-alpine
 
 ##
 # Install software packaged by Alpine
@@ -168,3 +168,5 @@ RUN cd /drupal \
 # TODO delete software not required outside of the build process e.g. curl composer ?openssl
 # TODO uninstall php extensions not needed outside of the build process e.g. ?php5-phar
 # TODO Licensing ?? MIT
+
+CMD ["/bin/bash"]

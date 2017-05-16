@@ -89,6 +89,7 @@ Initialising the container with <code>docker-compose up</code> creates the conta
 the end to install the modules into the database. See the <code>docker-compose.yml</code> file.
 
 ## Stopping and Starting a container
+# Warning!
 Stopping and starting the container is done with <code>docker-compose stop</code> and <code>docker-compose start</code>. 
 
 #####CAUTION: 
@@ -99,3 +100,15 @@ Sometimes this is what we want e.g we are spinning up a development code branch.
 
 There are also times when we DO NOT want to do this IE. ON SITES WITH LIVE USERS.
 
+## Pushing a build to the registry
+Alternatively use a cloud registry and get it built automatically when new code is committed to the git repository
+
+## Running an application on the container
+get setup and orientated by reading the 6 part introduction at https://docs.docker.com/get-started/ if necessary
+
+Otherwise type <code>docker run -p 80:80 repo/image:version</code>
+## running multiple containers as a swarm
+
+## Spanning service across multiple machines
+
+## Deploy swarm into production

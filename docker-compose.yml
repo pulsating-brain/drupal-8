@@ -2,20 +2,57 @@
 version: '3.1'
 services:
   web:
-    image: markfuller/drupal-8
+    image: markfuller/drupal-8-build
+    hostname: localhost
     deploy:
-      replicas: 3
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+        failure_action: pause
       resources:
         limits:
-          cpus: "0.1"
-          memory: 50M
+          cpus: '0.01'
+          memory: 1G
         restart_policy:
           condition: on-failure
+          delay: 5s
+          max-attempts: 2
+          window: 60s
         ports:
           - "80:80"
         networks:
-          webnet:
+          - webnet
+          - dbnet
+  # database
+  database:
+    image: mariadb:10.1.23
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+        failure_action: pause
+      resources:
+        limits:
+          cpus: '0.01'
+          memory: 1G
+        restart policy:
+          condition: on-failure
+          delay: 5s
+          max-attempts: 2
+          window: 60s
+        expose:
+          - "3306"
+        networks:
+          - dbnet
+
+  # ldap
+  # kibana
+  # elasticsearch
+  # logstash
 networks:
   webnet:
+  dbnet:
   # the default load-balanced overlay network
 
