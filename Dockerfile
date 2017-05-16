@@ -10,7 +10,7 @@
 # https://www.musl-libc.org/
 # https://busybox.net/about.html
 
-FROM alpine:3.5
+FROM drupal:8.3-fpm-alpine
 
 ##
 # Install software packaged by Alpine
