@@ -3,6 +3,12 @@ version: '3.1'
 services:
   web:
     image: markfuller/drupal-8-build
+    environment:
+      DB_HOST: database
+      DB_USER: drupal
+      DB_PASSWORD: drupal
+      DB_NAME: drupal
+      DB_DRIVER: mysql
     hostname: localhost
     deploy:
       replicas: 2
@@ -21,12 +27,17 @@ services:
           window: 60s
         ports:
           - "80:80"
-        networks:
-          - webnet
-          - dbnet
+    networks:
+      - webnet
+      - dbnet
   # database
   database:
     image: mariadb:10.1.23
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: drupal
+      MYSQL_USER: drupal
+      MYSQL_PASSWORD: drupal
     deploy:
       replicas: 2
       update_config:
@@ -42,10 +53,10 @@ services:
           delay: 5s
           max-attempts: 2
           window: 60s
-        expose:
-          - "3306"
-        networks:
-          - dbnet
+    expose:
+      - "3306"
+    networks:
+      - dbnet
 
   # ldap
   # kibana

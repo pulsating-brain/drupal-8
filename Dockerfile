@@ -169,4 +169,4 @@ RUN cd /drupal \
 # TODO uninstall php extensions not needed outside of the build process e.g. ?php5-phar
 # TODO Licensing ?? MIT
 
-CMD ["/bin/bash"]
+CMD ["/bin/bash -c "while true; do sleep 1; done""]
