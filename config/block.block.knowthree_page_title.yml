@@ -1,0 +1,27 @@
+uuid: 2df154c6-9041-4b75-b273-a42c194c90f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - knowthree
+_core:
+  default_config_hash: d5eXRdZO3HqTm7IVYx7x-lihRWl0B1QUEd8ZrUAqUkQ
+id: knowthree_page_title
+theme: knowthree
+region: content
+weight: -9
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/*\r\n/user/*\r\n<front>"
+    negate: true
+    context_mapping: {  }

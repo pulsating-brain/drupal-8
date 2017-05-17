@@ -1,0 +1,22 @@
+uuid: bc3b2dac-85ff-416e-93d2-782dbc1a69d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - knowthree
+_core:
+  default_config_hash: '-YPaIgW22dbnPpkg0D3qOSDDnJ3suE4LaGz9KsHn0Bc'
+id: knowthree_content
+theme: knowthree
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

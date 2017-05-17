@@ -1,0 +1,22 @@
+uuid: 953f615b-8736-4e40-a5ae-c01e1bdb715b
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - knowthree
+_core:
+  default_config_hash: 2pqIgkrgUsSMLNdRWfFxMnhH2SAw2mBYADdgE07vpBQ
+id: knowthree_help
+theme: knowthree
+region: content
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

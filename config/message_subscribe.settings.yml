@@ -1,0 +1,7 @@
+use_queue: false
+notify_own_actions: false
+flag_prefix: subscribe
+default_notifiers:
+  - 'message_digest:weekly'
+_core:
+  default_config_hash: b8Jkj4gPSbNrAIwFDHp6HJmB6If60zOYbK5mwTWCzvs

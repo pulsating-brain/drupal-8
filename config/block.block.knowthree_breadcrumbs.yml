@@ -1,0 +1,27 @@
+uuid: 9a29aaa4-b73a-4e4e-a891-d6212d4e910b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - knowthree
+_core:
+  default_config_hash: q80OC6GvOy9kHk_YWsYzjW1tWP83uhDWowANZa5MQUE
+id: knowthree_breadcrumbs
+theme: knowthree
+region: content_prefix
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

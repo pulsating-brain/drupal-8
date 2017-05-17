@@ -1,0 +1,24 @@
+uuid: e3137d7e-6cf3-497e-a076-22230c9d98ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blocking_issues
+  module:
+    - views
+  theme:
+    - bartik
+id: meta_issues_block
+theme: bartik
+region: sidebar_second
+weight: -4
+provider: null
+plugin: 'views_block:blocking_issues-block_3'
+settings:
+  id: 'views_block:blocking_issues-block_3'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 4ca6e855-78c8-404a-afcb-3ce4781c7689
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - knowthree
+_core:
+  default_config_hash: b0ncByUCaJQD0TwqLFN95mCf59kEQnK9TB7LQ34oMQc
+id: knowthree_branding
+theme: knowthree
+region: header_first
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

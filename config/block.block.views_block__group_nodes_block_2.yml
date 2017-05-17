@@ -1,0 +1,33 @@
+uuid: 1217be8b-7c6c-47f4-b13f-7a2c85885b96
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.group_nodes
+  module:
+    - user
+    - views
+  theme:
+    - knowthree
+id: views_block__group_nodes_block_2
+theme: knowthree
+region: content
+weight: -4
+provider: null
+plugin: 'views_block:group_nodes-block_2'
+settings:
+  id: 'views_block:group_nodes-block_2'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

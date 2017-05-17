@@ -1,0 +1,30 @@
+uuid: aedc9ab8-f9f0-497a-91e0-a9155eeb3771
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+    - user
+  theme:
+    - knowthree
+id: groupoperations
+theme: knowthree
+region: sidebar_second
+weight: -11
+provider: null
+plugin: group_operations
+settings:
+  id: group_operations
+  label: 'Group operations'
+  provider: group
+  label_display: '0'
+  context_mapping:
+    group: '@group.group_route_context:group'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

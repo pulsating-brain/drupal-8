@@ -1,0 +1,26 @@
+uuid: 0215f6e3-ef9d-4862-bec3-08db867b736b
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - knowthree
+_core:
+  default_config_hash: cz_P3UeEEEkpBpkltGTvuWg75hk-mPY1dQYpeQfx_8U
+id: knowthree_account_menu
+theme: knowthree
+region: leaderboard
+weight: 0
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

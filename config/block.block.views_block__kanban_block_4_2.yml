@@ -1,0 +1,32 @@
+uuid: 323ce624-9810-488d-be62-7f22ca8b4c27
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.kanban
+  module:
+    - user
+    - views
+  theme:
+    - bartik
+id: views_block__kanban_block_4_2
+theme: bartik
+region: footer_fourth
+weight: 0
+provider: null
+plugin: 'views_block:kanban-block_4'
+settings:
+  id: 'views_block:kanban-block_4'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

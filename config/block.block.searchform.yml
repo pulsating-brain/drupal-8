@@ -1,0 +1,28 @@
+uuid: 1026b24a-9aee-401a-85e7-cbc56668dc9c
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+    - user
+  theme:
+    - knowthree
+id: searchform
+theme: knowthree
+region: header_second
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

@@ -1,0 +1,32 @@
+uuid: 2259eb50-1ca0-4d59-84fc-7c7515798fd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blocking_issues
+  module:
+    - user
+    - views
+  theme:
+    - knowthree
+id: views_block__blocking_issues_block_1
+theme: knowthree
+region: sidebar_second
+weight: -9
+provider: null
+plugin: 'views_block:blocking_issues-block_1'
+settings:
+  id: 'views_block:blocking_issues-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

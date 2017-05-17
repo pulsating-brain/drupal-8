@@ -1,0 +1,39 @@
+uuid: 34f8d53a-5610-42e3-a772-81df8568db0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.group_nodes
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - bartik
+id: views_block__group_nodes_block_2_2
+theme: bartik
+region: content
+weight: -5
+provider: null
+plugin: 'views_block:group_nodes-block_2'
+settings:
+  id: 'views_block:group_nodes-block_2'
+  label: 'Issue Queue'
+  provider: views
+  label_display: visible
+  views_label: 'Issue Queue'
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: "/group/*/content/*\r\n/group/*/members/*\r\n/group/*/edit\r\n/group/*/content"
+    negate: true
+    context_mapping: {  }

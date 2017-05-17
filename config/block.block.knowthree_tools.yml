@@ -1,0 +1,26 @@
+uuid: dd61ad0e-5acc-43e7-899a-453d3b645ca5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - knowthree
+_core:
+  default_config_hash: ydqWwqLukZE-vBcAkOE2VKFdNcszeid3shwzRMkNj9I
+id: knowthree_tools
+theme: knowthree
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

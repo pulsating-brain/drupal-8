@@ -1,0 +1,17 @@
+uuid: 96a6c1a7-f6a1-4785-99f5-7a5bdcb95979
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.message.mail_subject
+    - message.template.example_create_comment
+id: message.example_create_comment.mail_subject
+targetEntityType: message
+bundle: example_create_comment
+mode: mail_subject
+content:
+  partial_0:
+    weight: 0
+    region: content
+hidden:
+  partial_1: true

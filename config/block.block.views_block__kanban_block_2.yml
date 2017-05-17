@@ -1,0 +1,32 @@
+uuid: e68fb8e6-c1ea-4817-b8e0-1cd1741b8757
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.kanban
+  module:
+    - user
+    - views
+  theme:
+    - knowthree
+id: views_block__kanban_block_2
+theme: knowthree
+region: subfeatures_second
+weight: 0
+provider: null
+plugin: 'views_block:kanban-block_2'
+settings:
+  id: 'views_block:kanban-block_2'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

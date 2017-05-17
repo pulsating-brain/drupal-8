@@ -1,0 +1,21 @@
+uuid: a1c1bc6d-7550-4a20-9076-24f3285e4119
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_group_description
+    - group.type.collaborative
+  module:
+    - text
+id: group.collaborative.field_group_description
+field_name: field_group_description
+entity_type: group
+bundle: collaborative
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

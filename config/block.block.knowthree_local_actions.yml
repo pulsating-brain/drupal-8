@@ -1,0 +1,20 @@
+uuid: 03f91d12-f201-4bcf-b1e4-4efe4dfa6395
+langcode: en
+status: true
+dependencies:
+  theme:
+    - knowthree
+_core:
+  default_config_hash: O8OoQzMbzLvesB02t8FtvByv724VJxblQE4Cr_CgGh4
+id: knowthree_local_actions
+theme: knowthree
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

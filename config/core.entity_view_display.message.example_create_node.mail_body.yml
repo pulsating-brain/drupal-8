@@ -1,0 +1,17 @@
+uuid: b806ae88-cb64-4b88-8ec9-797c1b8f97b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.message.mail_body
+    - message.template.example_create_node
+id: message.example_create_node.mail_body
+targetEntityType: message
+bundle: example_create_node
+mode: mail_body
+content:
+  partial_1:
+    weight: 0
+    region: content
+hidden:
+  partial_0: true

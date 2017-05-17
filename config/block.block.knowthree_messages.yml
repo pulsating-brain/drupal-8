@@ -1,0 +1,22 @@
+uuid: 279a45c5-2cb3-4616-82c3-27d5dcedfb2e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - knowthree
+_core:
+  default_config_hash: UKEOhMryQglc8eZz0TqeqzJOiKdHKjP9MNwts0schZo
+id: knowthree_messages
+theme: knowthree
+region: highlighted
+weight: -8
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

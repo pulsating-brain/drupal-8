@@ -1,0 +1,17 @@
+uuid: 13125d9f-71a2-4be2-b4c9-fa7110ddbb9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.message.mail_body
+    - message.template.issue_status_update
+id: message.issue_status_update.mail_body
+targetEntityType: message
+bundle: issue_status_update
+mode: mail_body
+content:
+  partial_1:
+    weight: 0
+    region: content
+hidden:
+  partial_0: true

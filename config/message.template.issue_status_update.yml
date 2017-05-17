@@ -1,0 +1,17 @@
+uuid: 383f3179-3b53-4a93-a692-3a1d28962e1d
+langcode: en
+status: true
+dependencies: {  }
+template: issue_status_update
+label: 'Issue Status Update'
+description: 'Message creted when Issues are updated'
+text:
+  -
+    value: "<p>[node:title] has been created by [node:author]</p>\r\n\r\n<p>[node:body]</p>\r\n"
+    format: formatted_text
+settings:
+  'token options':
+    clear: false
+    'token replace': true
+  purge_override: false
+  purge_methods: {  }

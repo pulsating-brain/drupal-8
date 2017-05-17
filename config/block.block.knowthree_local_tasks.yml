@@ -1,0 +1,22 @@
+uuid: 2d363531-5743-4017-a0c9-7ca16a21ade6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - knowthree
+_core:
+  default_config_hash: 7ytSsWec36PiOb8LyvEiB5nXELv75gg-2eI_aO88wU4
+id: knowthree_local_tasks
+theme: knowthree
+region: content
+weight: -8
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

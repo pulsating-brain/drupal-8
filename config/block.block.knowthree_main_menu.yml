@@ -1,0 +1,26 @@
+uuid: 7d180877-0ad9-44c2-ba00-14890e1da5cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - knowthree
+_core:
+  default_config_hash: DLnYra6KNmrnbEYZGiQeh79psLfEN2VA4snq2acLmgQ
+id: knowthree_main_menu
+theme: knowthree
+region: navbar
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main menu'
+  provider: system
+  label_display: '1'
+  level: 1
+  depth: 0
+visibility: {  }
